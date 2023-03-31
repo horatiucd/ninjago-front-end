@@ -11,7 +11,7 @@ describe('AppComponent', () => {
       ],
     }).compileComponents();
 
-    title = 'Ninjago App';
+    title = 'Ninjago Application';
   }));
 
   it('should create the app', () => {

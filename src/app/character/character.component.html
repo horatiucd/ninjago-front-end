@@ -1,0 +1,12 @@
+<h4>{{ character.name }}</h4>
+<div>{{ character.type }}</div>
+<div>From season: {{ character.season }}</div>
+<div>
+  <a (click)="onToggleFavor()">
+    favor
+  </a>
+  |
+  <a (click)="onDelete()">
+    dismiss
+  </a>
+</div>

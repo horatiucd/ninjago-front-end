@@ -1,14 +1,18 @@
-<style>
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
-</style>
-
-<div class="content" role="main">
-    <span>{{ title }} is running!</span>
-</div>
+<nav>
+  <a routerLink="/">
+    All
+  </a>
+  <a routerLink="/Good">
+    Good
+  </a>
+  <a routerLink="/Evil">
+    Evil
+  </a>
+</nav>
+<section>
+  <header>
+    <h1>Ninjago Series</h1>
+    <p>Tracks favorite characters</p>
+  </header>
+  <router-outlet></router-outlet>
+</section>

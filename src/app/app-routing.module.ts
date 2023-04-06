@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 
 const routes: Routes = [
   { path: '', component: CharacterListComponent},
-  { path: '', redirectTo: 'all', pathMatch: 'full'}
+  { path: '', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({

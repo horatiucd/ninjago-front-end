@@ -21,12 +21,4 @@ export class CharacterListComponent implements OnInit {
     this.characterService.getCharacters()
       .subscribe(characters => this.characters = characters);
   }
-
-  onDismissCharacter(character: Character): void {
-    window.alert(character.name + ' is dismissed.');
-  }
-
-  onToggleFavorCharacter(character: Character): void {
-    window.alert(character.name + ' is (un)favored.');
-  }
 }

@@ -1,12 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { CharacterListComponent } from './character-list/character-list.component';
+import {AppComponent} from './app.component';
+import {CharacterListComponent} from './character-list/character-list.component';
 import {AppRoutingModule} from './app-routing.module';
-import { CharacterComponent } from './character/character.component';
-import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {CharacterServiceInterceptor} from './mocks/character-service-interceptor';
+import {CharacterComponent} from './character/character.component';
+import {HttpClientModule, HttpXhrBackend} from '@angular/common/http';
+import {MockHttpBackend} from './mocks/mock-http-backend';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import {CharacterServiceInterceptor} from './mocks/character-service-interceptor
     HttpClientModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: CharacterServiceInterceptor, multi: true}
+    { provide: HttpXhrBackend, useClass: MockHttpBackend }
   ],
   bootstrap: [AppComponent]
 })

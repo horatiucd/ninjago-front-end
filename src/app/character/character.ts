@@ -1,7 +1,10 @@
+import {CharacterType} from './character-type';
+
 export interface Character {
   id: number;
-  type: string;
+  type: CharacterType;
   name: string;
   season: number;
   favorite: boolean;
 }
+
